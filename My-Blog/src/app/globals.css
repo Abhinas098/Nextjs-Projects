@@ -1,0 +1,26 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: #373738;
+  color: antiquewhite;
+  /* min-height: 100vh; */
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.layout{
+  background: #000;
+  width: 90vw;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

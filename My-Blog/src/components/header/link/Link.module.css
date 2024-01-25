@@ -1,0 +1,11 @@
+.navLink {
+  min-width: 100px;
+  padding: 7px;
+  border-radius: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+.active {
+  background-color: #161615;
+  color: rgb(177, 239, 249);
+}
