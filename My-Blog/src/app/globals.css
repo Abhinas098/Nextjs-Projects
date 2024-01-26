@@ -13,9 +13,9 @@ a {
   color: currentColor;
 }
 
-.layout{
+.layout {
   background: #000;
-  width: 90vw;
+  width: 100vw;
   margin: auto;
   padding-left: 50px;
   padding-right: 50px;

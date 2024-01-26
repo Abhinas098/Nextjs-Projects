@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid white;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(20px); 
 }
 .logo {
   font-size: 30px;
