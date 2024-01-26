@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import styles from "./NavLinks.module.css";
 import Links from "../link/Links";
-import Menu from "@/components/Svgs/Menu";
-import Close from "@/components/Svgs/Close";
+import Menu from "@/Icons/Menu";
+import Close from "@/Icons/Close";
 
 const NavLinks = () => {
   const links = [
