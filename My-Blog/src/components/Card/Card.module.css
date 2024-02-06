@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imgContainer {
+  margin-top: 20px;
+  width: 60%;
+  height: 200px;
+  position: relative;
+  align-items: center;
+}
+
+.img {
+  object-fit: contain;
+}
+
+.title {
+  width: 90%;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  width: 90%;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: gray;
+}
+
+.link {
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  .imgContainer {
+    width: 80%;
+    height: 200px;
+    position: relative;
+  }
+}

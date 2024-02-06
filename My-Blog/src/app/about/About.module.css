@@ -1,0 +1,143 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+}
+
+.imgContainer {
+  flex: 1;
+  position: relative;
+  max-width: 35%;
+  border: 1px solid;
+  border-radius: 50%;
+  right: 30px;
+  top: 20px;
+  animation: fadeIn 1s ease-in-out, slideInRight 1s ease-in-out;
+}
+
+.imgContainer img {
+  position: relative;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.contentContainer {
+  flex: 1;
+  padding: 20px;
+  float: right;
+}
+.contentContainer h1 {
+  width: fit-content;
+  padding: 10px;
+  border-bottom: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contentContainer i{
+  color: aquamarine;
+}
+
+.contentContainer {
+  font-size: 17px;
+}
+.tabsContainer {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabsContainer button {
+  color: rgb(144, 202, 202);
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 5px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.tabsContainer button.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: aqua;
+}
+
+.skills,
+.career {
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  min-height: 30vh;
+  max-width: 80vw;
+  overflow: hidden;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 25vw;
+}
+
+.contentContainer {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.career:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skillItem {
+  color: rgb(56, 254, 76);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.skillItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skillList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .imgContainer {
+    display: none;
+  }
+  .skills {
+    max-width: 55vw;
+  }
+}

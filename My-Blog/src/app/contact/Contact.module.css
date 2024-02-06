@@ -1,0 +1,90 @@
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container {
+  font-size: 1.3rem;
+  border-radius: 10px;
+  width: 65%;
+  margin: auto;
+  padding: 50px;
+  box-shadow: 0 54px 55px rgb(78 78 78 / 25%), 0 -12px 30px rgb(78 78 78 / 25%),
+    0 4px 6px rgb(78 78 78 / 25%), 0 12px 13px rgb(78 78 78 / 25%),
+    0 -3px 5px rgb(78 78 78 / 25%);
+}
+
+.container input,
+.container textarea {
+  margin: 10px 0 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.container input {
+  font-size: 1.2rem;
+  border-color: rgb(31, 28, 28);
+}
+
+.container textarea {
+  font-size: 20px;
+  resize:vertical;
+  border-color: rgb(31, 28, 28);
+}
+
+.container h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.block button {
+  padding: 10px;
+  font-size: 20px;
+  width: 30%;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: #fffcfc;
+  cursor: pointer;
+}
+
+.block button:hover{
+  background: #a8a6a6;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    padding: 30px;
+  }
+
+  .block button {
+    width: 50%;
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .block button {
+    width: 70%;
+  }
+}

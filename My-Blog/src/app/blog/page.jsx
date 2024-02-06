@@ -1,85 +1,21 @@
-import React from "react";
+import styles from "./blog.module.css";
+import Card from "@/components/Card/Card";
+import { getPosts } from "@/components/data/TempData";
 
 const Blog = () => {
+  const posts = getPosts();
+
   return (
-    <div>
-      <p>
-        Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Deleniti autem veritatis illo blanditiis adipisci tempore est quisquam
-        id dignissimos? Doloremque quisquam beatae harum sunt totam dolore
-        perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-        consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-        aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos
-        vitae eaque. Dignissimos distinctio voluptatum in ex.lor
-      </p>
-      <br /> Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing
-      elit. Deleniti autem veritatis illo blanditiis adipisci tempore est
-      quisquam id dignissimos? Doloremque quisquam beatae harum sunt totam
-      dolore perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-      consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-      aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos vitae
-      eaque. Dignissimos distinctio voluptatum in ex.lor
-      <br /> Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing
-      elit. Deleniti autem veritatis illo blanditiis adipisci tempore est
-      quisquam id dignissimos? Doloremque quisquam beatae harum sunt totam
-      dolore perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-      consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-      aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos vitae
-      eaque. Dignissimos distinctio voluptatum in ex.lor
-      <br /> Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing
-      elit. Deleniti autem veritatis illo blanditiis adipisci tempore est
-      quisquam id dignissimos? Doloremque quisquam beatae harum sunt totam
-      dolore perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-      consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-      aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos vitae
-      eaque. Dignissimos distinctio voluptatum in ex.lor
-      <br /> Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing
-      elit. Deleniti autem veritatis illo blanditiis adipisci tempore est
-      quisquam id dignissimos? Doloremque quisquam beatae harum sunt totam
-      dolore perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-      consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-      aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos vitae
-      eaque. Dignissimos distinctio voluptatum in ex.lor
-      <div>
-        <p>
-          Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Deleniti autem veritatis illo blanditiis adipisci tempore est quisquam
-          id dignissimos? Doloremque quisquam beatae harum sunt totam dolore
-          perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-          consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-          aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos
-          vitae eaque. Dignissimos distinctio voluptatum in ex.lor
-        </p>
-        <br /> Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing
-        elit. Deleniti autem veritatis illo blanditiis adipisci tempore est
-        quisquam id dignissimos? Doloremque quisquam beatae harum sunt totam
-        dolore perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-        consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-        aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos
-        vitae eaque. Dignissimos distinctio voluptatum in ex.lor
-        <br /> Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing
-        elit. Deleniti autem veritatis illo blanditiis adipisci tempore est
-        quisquam id dignissimos? Doloremque quisquam beatae harum sunt totam
-        dolore perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-        consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-        aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos
-        vitae eaque. Dignissimos distinctio voluptatum in ex.lor
-        <br /> Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing
-        elit. Deleniti autem veritatis illo blanditiis adipisci tempore est
-        quisquam id dignissimos? Doloremque quisquam beatae harum sunt totam
-        dolore perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-        consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-        aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos
-        vitae eaque. Dignissimos distinctio voluptatum in ex.lor
-        <br /> Blogafjsfj Lorem ipsum dolor, sit amet consectetur adipisicing
-        elit. Deleniti autem veritatis illo blanditiis adipisci tempore est
-        quisquam id dignissimos? Doloremque quisquam beatae harum sunt totam
-        dolore perspiciatis quia dolor quaerat.lore Lorem ipsum, dolor sit amet
-        consectetur adipisicing elit. Aliquam qui eveniet asperiores cum nobis
-        aperiam voluptatum assumenda similique, ipsa ad voluptatem eum quos
-        vitae eaque. Dignissimos distinctio voluptatum in ex.lor
+    <>
+      <h2 className={styles.heading}>My Posts</h2>
+      <div className={styles.container}>
+        {posts.map((post) => (
+          <div className={styles.post} key={post.id}>
+            <Card post={post} />
+          </div>
+        ))}
       </div>
-    </div>
+    </>
   );
 };
 
